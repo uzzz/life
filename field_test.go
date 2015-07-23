@@ -128,30 +128,30 @@ func TestField_AliveCellsAround(t *testing.T) {
 func TestField_String(t *testing.T) {
     field := NewField(3, 3)
 
-    if field.String() != "   \n" +
-                         "   \n" +
-                         "   " {
+    if field.String() != "...\n" +
+                         "...\n" +
+                         "..." {
         t.Error()
     }
 
     field.CellAt(0, 0).MakeAlive()
-    if field.String() != "*  \n" +
-                         "   \n" +
-                         "   " {
+    if field.String() != "*..\n" +
+                         "...\n" +
+                         "..." {
         t.Error()
     }
 
     field.CellAt(2, 2).MakeAlive()
-    if field.String() != "*  \n" +
-                         "   \n" +
-                         "  *" {
+    if field.String() != "*..\n" +
+                         "...\n" +
+                         "..*" {
         t.Error()
     }
 
     field.CellAt(1, 1).MakeAlive()
-    if field.String() != "*  \n" +
-                         " * \n" +
-                         "  *" {
+    if field.String() != "*..\n" +
+                         ".*.\n" +
+                         "..*" {
         t.Error()
     }
 }

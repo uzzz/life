@@ -63,15 +63,7 @@ func (w *World) NextGen() {
 }
 
 func (w *World) IsFinished() bool {
-    return w.AreAllDead() || w.SameAsPrevGen()
-}
-
-func (w *World) AreAllDead() bool {
-    return w.currentGenField.AreAllDead()
-}
-
-func (w *World) SameAsPrevGen() bool {
-    return w.sameAsPrevGen
+    return w.currentGenField.AreAllDead() || w.sameAsPrevGen
 }
 
 func (w *World) String() string {

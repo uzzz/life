@@ -20,6 +20,6 @@ func (c *Cell) String() string {
     if c.alive {
         return "*"
     } else {
-        return " "
+        return "."
     }
 }

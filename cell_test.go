@@ -32,8 +32,8 @@ func TestCell_MakeDead(t *testing.T) {
 
 func TestCell_String(t *testing.T) {
     cell := new(Cell)
-    if cell.String() != " " {
-        t.Error("expected cell's string representation to be a space")
+    if cell.String() != "." {
+        t.Error("expected cell's string representation to be a .")
     }
     cell.MakeAlive()
     if cell.String() != "*" {
